@@ -1,0 +1,18 @@
+{
+  "name"                : "node-server-template",
+  "cwd"                 : "",
+  "script"              : "dist/app.js",
+  "source_map_support"  : true,
+  "node_args"           : [],
+  "exec_mode"           : "cluster",
+  "log_date_format"     : "YYYY-MM-DD HH:mm:ss",
+  "instances"           : 1,
+  "min_uptime"          : "1000s",
+  "max_restarts"        : 10,
+  "max_memory_restart"  : "450M",
+  "autorestart"         : true,
+  "env"                 : {
+    "NODE_ENV"          : "production",
+    "PORT"              : 3000
+  }
+}
