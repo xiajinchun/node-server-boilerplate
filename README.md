@@ -1,6 +1,11 @@
-# node-server-template
+# node-server-boilerplate
 
-> Template for node server with [koa v2](https://github.com/koajs/koa/tree/v2.x).
+> Boilerplate for API Server with [koa v2](https://github.com/koajs/koa/tree/v2.x) written in Node.js and ES6.
+
+## Requirements
+
+- node ^6.0.0
+- npm ^3.9.0
 
 ## Dependencies
 

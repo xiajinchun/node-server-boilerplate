@@ -1,5 +1,5 @@
 {
-  "name": "node-server-template",
+  "name": "node-server-boilerplate",
   "version": "1.0.0",
   "description": "Template for node server with koa v2",
   "main": "src/app.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiajinchun/node-server-template.git"
+    "url": "git+https://github.com/xiajinchun/node-server-boilerplate.git"
   },
   "keywords": [
     "koa2",
@@ -19,7 +19,7 @@
   ],
   "author": "Jinchun Xia",
   "license": "MIT",
-  "homepage": "https://github.com/xiajinchun/node-server-template#readme",
+  "homepage": "https://github.com/xiajinchun/node-server-boilerplate#readme",
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",

@@ -1,5 +1,5 @@
 {
-  "name"                : "node-server-template",
+  "name"                : "node-server-boilerplate",
   "cwd"                 : "",
   "script"              : "dist/app.js",
   "source_map_support"  : true,
