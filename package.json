@@ -1,22 +1,17 @@
 {
   "name": "node-server-boilerplate",
   "version": "1.0.0",
-  "description": "Template for node server with koa v2",
-  "main": "src/app.js",
+  "description": "Boilerplate for API Server with koa v2 written in Node.js and ES6",
   "scripts": {
     "dev": "NODE_ENV=development nodemon -x babel-node -w src ./src/app.js ",
     "build": "babel src -d dist -s",
-    "prd": "pm2 start ./ecosystem.json",
+    "prd": "pm2 start ./config/ecosystem.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xiajinchun/node-server-boilerplate.git"
   },
-  "keywords": [
-    "koa2",
-    "server"
-  ],
   "author": "Jinchun Xia",
   "license": "MIT",
   "homepage": "https://github.com/xiajinchun/node-server-boilerplate#readme",

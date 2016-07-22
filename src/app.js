@@ -7,10 +7,10 @@ import PgPool from 'pg-pool';
 import {errorHandler, pgPoolErrorHandler, uncaughtExceptionHandler} from './middlewares/errorHandler.js';
 import responseHandler from './middlewares/responseHandler.js';
 import router from './routers.js';
-import config from './config.js';
+import config from '../config/index.js';
 
 const app = new Koa();
-const port = process.env.PORT || 3000;
+const port = config.port;
 
 process.on('uncaughtException', uncaughtExceptionHandler(app));
 
