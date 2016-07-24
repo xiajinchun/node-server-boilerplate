@@ -5,7 +5,7 @@ import ResponseError from '../models/ResponseError.js';
 成功返回结果：{ ok: 1, data: null||{}||[] }
 失败返回结果：{ ok: 0, error: { code: custom_code, message: '错误' } }
 */
-export function errorHandler () {
+export function koaErrorHandler () {
     return async (ctx, next) => {
         try {
             await next();
@@ -18,7 +18,6 @@ export function errorHandler () {
             } else {
                 ctx.body.error.code = ctx.status = 500;
             }
-
             if (ctx.app.env == 'development') {
                 ctx.body.error.stack = error.stack;
                 ctx.app.emit('error', error, ctx);

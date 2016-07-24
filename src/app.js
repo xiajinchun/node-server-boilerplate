@@ -4,24 +4,24 @@ import kcors from 'kcors';
 import bodyParser from 'koa-bodyparser';
 import PgPool from 'pg-pool';
 
-import {errorHandler, pgPoolErrorHandler, uncaughtExceptionHandler} from './middlewares/errorHandler.js';
+import * as errorHandlers from './middlewares/errorHandlers.js';
 import responseHandler from './middlewares/responseHandler.js';
-import router from './routers.js';
+import router from './routers/index.js';
 import config from '../config/index.js';
 
 const app = new Koa();
 const port = config.port;
 
-process.on('uncaughtException', uncaughtExceptionHandler(app));
+process.on('uncaughtException', errorHandlers.uncaughtExceptionHandler(app));
 
 app.use(koaLogger());
-app.use(errorHandler());
+app.use(errorHandlers.koaErrorHandler());
 app.use(bodyParser());
 
 const pgPool = new PgPool(config.db);
 // attach an error handler to the pool for when a connected, idle client
 // receives an error by being disconnected, etc
-pgPool.on('error', pgPoolErrorHandler(app));
+pgPool.on('error', errorHandlers.pgPoolErrorHandler(app));
 
 // setup postgresql connection
 app.use(async (ctx, next) => {
